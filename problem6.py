@@ -19,6 +19,7 @@ def recurring_decimal_cycle(neumrator: int, denominator: int):
 def main():
     n=int(input("Enter number of fractions: "))
     maxLen=(0,0,0)
+    
     for i in range(n):
         neumrator=random.randint(-1000,1000)
         denominator=random.randint(1,1000)
@@ -26,6 +27,7 @@ def main():
         len=recurring_decimal_cycle(neumrator, denominator)
         maxLen=(len,neumrator,denominator) if len > maxLen[0] else maxLen
         print(f"length of cycle is {len}")
+
     print(f"{maxLen[1]}/{maxLen[2]} has longest cycle with length {maxLen[0]}")
 
 if __name__ == "__main__":
